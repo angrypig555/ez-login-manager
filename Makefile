@@ -2,7 +2,7 @@ CC=gcc
 PHONY= all clean configure half_configure
 
 all:
-	$(CC) src/main.c -o build/ez-login-manager
+	$(CC) src/main.c -o build/ez-login-manager -lssl -lcrypto
 	cp src/users.txt build/users.txt
 	cp src/password.txt build/password.txt
 
